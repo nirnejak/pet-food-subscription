@@ -24,7 +24,7 @@ const Hero: React.FC<Props> = () => {
 
   return (
     <div className="bg-green-950 text-green-50 px-10 w-full">
-      <Container className="mb-48 mt-44 text-center">
+      <Container className="pb-48 pt-44 text-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

@@ -3,6 +3,7 @@ import { type Metadata } from "next"
 
 import generateMetadata from "utils/seo"
 import Hero from "components/Hero"
+import About from "components/About"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",
@@ -12,8 +13,9 @@ export const metadata: Metadata = generateMetadata({
 
 const Home: React.FC = () => {
   return (
-    <main className="flex">
+    <main>
       <Hero />
+      <About />
     </main>
   )
 }
