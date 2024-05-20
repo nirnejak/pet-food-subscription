@@ -1,15 +1,24 @@
 import * as React from "react"
 import type { Viewport } from "next"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 
 import classNames from "utils/classNames"
 import Header from "components/Header"
 
 import "../styles/main.css"
 
-const sansFont = Inter({
+const sansFont = localFont({
   variable: "--sans-font",
-  subsets: ["latin"],
+  src: [
+    {
+      path: "../fonts/Satoshi-Variable.ttf",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Satoshi-VariableItalic.ttf",
+      style: "italic",
+    },
+  ],
 })
 
 export const viewport: Viewport = {
