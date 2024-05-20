@@ -18,19 +18,19 @@ const Header: React.FC<Props> = () => {
       transition={{ duration: 1, delay: 1.4, type: "spring" }}
       className="fixed w-full top-4 px-4 z-max"
     >
-      <div className="flex rounded-lg bg-green-50 overflow-hidden">
+      <div className="flex rounded-lg bg-green-50 overflow-hidden shadow-2xl">
         <div className="flex items-center">
           <Logo />
           <div>
-            <p className="text-gray-700 font-semibold">
+            <p className="text-gray-700 font-semibold leading-tight">
               Fresh & Raw Beef for Dogs
             </p>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-400 leading-none">
               By <span className="font-semibold">CrudoPerro.com</span>
             </p>
           </div>
         </div>
-        <nav className="hidden md:flex items-center ml-10 text-sm text-gray-700">
+        <nav className="hidden md:flex items-center ml-6 text-sm text-gray-700">
           <a href="" className={linkClassName}>
             Home
           </a>
