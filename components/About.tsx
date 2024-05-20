@@ -33,7 +33,7 @@ const About: React.FC<Props> = () => {
             initial={"hidden"}
             animate={controls}
             variants={variants}
-            transition={{ duration: 1, delay: 0.6, type: "spring" }}
+            transition={{ duration: 1, delay: 0.2, type: "spring" }}
             className="text-4xl mt-32 mb-6 font-semibold"
           >
             You shouldn’t be the only one eating healthy.
@@ -43,7 +43,7 @@ const About: React.FC<Props> = () => {
               initial={"hidden"}
               animate={controls}
               variants={variants}
-              transition={{ duration: 1, delay: 0.8, type: "spring" }}
+              transition={{ duration: 1, delay: 0.4, type: "spring" }}
               className="mb-20 text-amber-700"
             >
               Like you, we love our pets and care about their health. That’s why
@@ -56,7 +56,7 @@ const About: React.FC<Props> = () => {
             initial={"hidden"}
             animate={controls}
             variants={variants}
-            transition={{ duration: 1, delay: 1, type: "spring" }}
+            transition={{ duration: 1, delay: 0.6, type: "spring" }}
             className="flex justify-center mb-40"
           >
             <img src="./ingredients.png" />
