@@ -9,7 +9,7 @@ const linkClassName =
 const Header: React.FC<Props> = () => {
   return (
     <header>
-      <div className="bg-green-900 text-green-50 text-sm py-3 text-center flex justify-center gap-2 items-center">
+      <div className="bg-green-950 text-green-50 text-sm py-3 text-center flex justify-center gap-2 items-center">
         <p>You've been gifted 50% off your first purchase! | </p>
         <p>REDEEM NOW</p>
       </div>
