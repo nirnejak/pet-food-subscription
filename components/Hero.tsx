@@ -28,7 +28,7 @@ const Hero: React.FC<Props> = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1, type: "spring" }}
+          transition={{ duration: 1, delay: 2, type: "spring" }}
           className="mb-6"
         >
           Real beef • Made fresh • Delivered
@@ -36,7 +36,7 @@ const Hero: React.FC<Props> = () => {
         <motion.h1
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 1, type: "spring" }}
+          transition={{ duration: 1, delay: 1, type: "spring" }}
           className="text-7xl font-semibold leading-tight mb-10"
         >
           A long life starts with the right food
@@ -44,7 +44,7 @@ const Hero: React.FC<Props> = () => {
         <motion.button
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 1, delay: 0.2, type: "spring" }}
+          transition={{ duration: 1, delay: 1.2, type: "spring" }}
           className="px-5 py-3 bg-orange-600 mb-10"
         >
           Start Today
@@ -52,7 +52,7 @@ const Hero: React.FC<Props> = () => {
         <motion.div
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 1, delay: 0.4, type: "spring" }}
+          transition={{ duration: 1, delay: 1.4, type: "spring" }}
           className="flex items-center justify-center gap-2"
         >
           <svg
@@ -72,7 +72,7 @@ const Hero: React.FC<Props> = () => {
         <motion.div
           initial={{ opacity: 0, translateY: "100%" }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 1, delay: 0.4, type: "spring" }}
+          transition={{ duration: 1, delay: 1.4, type: "spring" }}
           className="mt-20"
         >
           <div
