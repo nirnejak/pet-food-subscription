@@ -1,13 +1,27 @@
 "use client"
 import * as React from "react"
+import { motion } from "framer-motion"
 
 import Container from "./Container"
-
-import { motion, Reorder } from "framer-motion"
 
 interface Props {}
 
 const Hero: React.FC<Props> = () => {
+  const [rotation, setRotation] = React.useState(0)
+  const rotationFactor = 0.1
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY
+    setRotation((scrollPosition * rotationFactor) % 360)
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <div className="bg-green-950 text-green-50 px-10 w-full">
       <Container className="mb-48 mt-28 text-center">
@@ -55,9 +69,21 @@ const Hero: React.FC<Props> = () => {
           </svg>
           <p>Watch Our Ad, “Forever”</p>
         </motion.div>
-        <div className="mt-20">
-          <img src="./Food.png" />
-        </div>
+        <motion.div
+          initial={{ opacity: 0, translateY: "100%" }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 1, delay: 0.4, type: "spring" }}
+          className="mt-20"
+        >
+          <div
+            style={{
+              transform: `rotate(${rotation}deg)`,
+              transition: "transform 0.1s linear",
+            }}
+          >
+            <img src="./Food.png" />
+          </div>
+        </motion.div>
       </Container>
     </div>
   )
