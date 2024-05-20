@@ -3,6 +3,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 
 import Logo from "./Logo"
+import { ThreeLineHorizontal } from "akar-icons"
 
 interface Props {}
 
@@ -29,7 +30,7 @@ const Header: React.FC<Props> = () => {
             </p>
           </div>
         </div>
-        <nav className="flex items-center ml-10 text-sm text-gray-700">
+        <nav className="hidden md:flex items-center ml-10 text-sm text-gray-700">
           <a href="" className={linkClassName}>
             Home
           </a>
@@ -55,10 +56,13 @@ const Header: React.FC<Props> = () => {
             Contact
           </a>
         </nav>
-        <div className="flex items-center text-sm text-gray-700 ml-auto">
+        <div className="hidden md:flex items-center text-sm text-gray-700 ml-auto">
           <div className={linkClassName}>Search</div>
           <div className={linkClassName}>Account</div>
           <div className={linkClassName}>Cart(0)</div>
+        </div>
+        <div className="flex md:hidden ml-auto py-4 px-4 hover:bg-green-200 cursor-pointer transition-all">
+          <ThreeLineHorizontal />
         </div>
       </div>
     </motion.header>
