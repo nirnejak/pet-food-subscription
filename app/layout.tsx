@@ -3,6 +3,7 @@ import type { Viewport } from "next"
 import { Inter } from "next/font/google"
 
 import classNames from "utils/classNames"
+import Header from "components/Header"
 
 import "../styles/main.css"
 
@@ -27,9 +28,10 @@ const RootLayout: React.FC<Props> = ({ children }) => {
       <body
         className={classNames(
           sansFont.variable,
-          "overflow-x-hidden bg-zinc-900 font-sans"
+          "overflow-x-hidden bg-amber-50 font-sans"
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
