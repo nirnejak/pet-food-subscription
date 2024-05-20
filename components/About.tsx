@@ -30,10 +30,15 @@ const About: React.FC<Props> = () => {
     visible: { opacity: 1 },
   }
 
+  const featureVariants = {
+    hidden: { opacity: 0, translateY: 20 },
+    visible: { opacity: 1, translateY: 0 },
+  }
+
   return (
-    <div ref={ref}>
+    <div>
       <Container size="wide" className="text-green-950">
-        <div className="text-center">
+        <div className="text-center" ref={ref}>
           <motion.h2
             initial={"hidden"}
             animate={controls}
@@ -61,8 +66,8 @@ const About: React.FC<Props> = () => {
             <motion.div
               initial={"hidden"}
               animate={controls}
-              variants={imageVariants}
-              transition={{ duration: 1, delay: 0.8, type: "spring" }}
+              variants={featureVariants}
+              transition={{ duration: 1, delay: 1, type: "spring" }}
               className="absolute top-10 mr-30 flex text-left gap-4"
             >
               <div>
@@ -107,8 +112,8 @@ const About: React.FC<Props> = () => {
             <motion.div
               initial={"hidden"}
               animate={controls}
-              variants={imageVariants}
-              transition={{ duration: 1, delay: 0.8, type: "spring" }}
+              variants={featureVariants}
+              transition={{ duration: 1, delay: 1.2, type: "spring" }}
               className="absolute flex top-10 right-0 text-left gap-4"
             >
               <div>
@@ -153,8 +158,8 @@ const About: React.FC<Props> = () => {
             <motion.div
               initial={"hidden"}
               animate={controls}
-              variants={imageVariants}
-              transition={{ duration: 1, delay: 0.8, type: "spring" }}
+              variants={featureVariants}
+              transition={{ duration: 1, delay: 1.4, type: "spring" }}
               className="absolute flex bottom-0 left-0 text-left gap-4"
             >
               <div>
@@ -199,8 +204,8 @@ const About: React.FC<Props> = () => {
             <motion.div
               initial={"hidden"}
               animate={controls}
-              variants={imageVariants}
-              transition={{ duration: 1, delay: 0.8, type: "spring" }}
+              variants={featureVariants}
+              transition={{ duration: 1, delay: 1.6, type: "spring" }}
               className="absolute flex bottom-0 right-0 text-left gap-4"
             >
               <div>
