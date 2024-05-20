@@ -24,12 +24,12 @@ const Hero: React.FC<Props> = () => {
 
   return (
     <div className="bg-green-950 text-green-50 px-10 w-full">
-      <Container className="pb-48 pt-44 text-center">
+      <Container className="pb-48 pt-36 md:pt-44 text-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2, type: "spring" }}
-          className="mb-6"
+          className="mb-6 text-sm md:text-base"
         >
           Real beef • Made fresh • Delivered
         </motion.div>
@@ -37,7 +37,7 @@ const Hero: React.FC<Props> = () => {
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 1, delay: 1, type: "spring" }}
-          className="text-7xl font-semibold leading-tight mb-10"
+          className="text-4xl md:text-7xl font-semibold leading-snug md:leading-tight mb-10"
         >
           A long life starts with the right food
         </motion.h1>
@@ -45,7 +45,7 @@ const Hero: React.FC<Props> = () => {
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 1, delay: 1.2, type: "spring" }}
-          className="px-5 py-3 bg-orange-600 mb-10"
+          className="px-4 py-2 text-sm md:text-base md:px-5 md:py-3 bg-orange-600 mb-10"
         >
           Start Today
         </motion.button>
@@ -53,7 +53,7 @@ const Hero: React.FC<Props> = () => {
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 1, delay: 1.4, type: "spring" }}
-          className="flex items-center justify-center gap-2"
+          className="flex items-center justify-center gap-2 text-sm md:text-base"
         >
           <svg
             width="32"
