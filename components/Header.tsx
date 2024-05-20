@@ -1,19 +1,23 @@
+"use client"
 import * as React from "react"
+import { motion } from "framer-motion"
+
 import Logo from "./Logo"
 
 interface Props {}
 
 const linkClassName =
-  "py-4 px-4 hover:bg-green-100 cursor-pointer transition-all"
+  "py-4 px-4 hover:bg-green-200 cursor-pointer transition-all bg-green-50"
 
 const Header: React.FC<Props> = () => {
   return (
-    <header>
-      <div className="bg-green-950 text-green-50 text-sm py-3 text-center flex justify-center gap-2 items-center">
-        <p>You've been gifted 50% off your first purchase! | </p>
-        <p>REDEEM NOW</p>
-      </div>
-      <div className="flex">
+    <motion.header
+      initial={{ opacity: 0, translateY: "-100%" }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 1, delay: 1.4, type: "spring" }}
+      className="fixed w-full top-4 px-4 z-max"
+    >
+      <div className="flex rounded-lg bg-green-50 overflow-hidden">
         <div className="flex items-center">
           <Logo />
           <div>
@@ -57,7 +61,7 @@ const Header: React.FC<Props> = () => {
           <div className={linkClassName}>Cart(0)</div>
         </div>
       </div>
-    </header>
+    </motion.header>
   )
 }
 
