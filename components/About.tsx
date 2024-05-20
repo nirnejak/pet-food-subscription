@@ -44,7 +44,7 @@ const About: React.FC<Props> = () => {
             animate={controls}
             variants={variants}
             transition={{ duration: 1, delay: 0.2, type: "spring" }}
-            className="text-4xl mt-32 mb-6 font-semibold"
+            className="text-3xl md:text-4xl mt-16 md:mt-32 mb-6 font-semibold"
           >
             You shouldn’t be the only one eating healthy.
           </motion.h2>
@@ -54,7 +54,7 @@ const About: React.FC<Props> = () => {
               animate={controls}
               variants={variants}
               transition={{ duration: 1, delay: 0.4, type: "spring" }}
-              className="mb-32 text-amber-700"
+              className="mb-16 md:mb-32 text-amber-700 text-sm md:text-base"
             >
               Like you, we love our pets and care about their health. That’s why
               we created The Farmer’s Dog — a service that delivers balanced,
@@ -62,13 +62,22 @@ const About: React.FC<Props> = () => {
               driven by love.
             </motion.p>
           </Container>
-          <div className="relative">
+          <div className="relative flex gap-7 flex-col mb-40">
+            <motion.div
+              initial={"hidden"}
+              animate={controls}
+              variants={imageVariants}
+              transition={{ duration: 1, delay: 0.6, type: "spring" }}
+              className="flex justify-center"
+            >
+              <img src="./ingredients.png" />
+            </motion.div>
             <motion.div
               initial={"hidden"}
               animate={controls}
               variants={featureVariants}
               transition={{ duration: 1, delay: 1, type: "spring" }}
-              className="absolute top-10 mr-30 flex text-left gap-4"
+              className="md:absolute top-10 mr-30 flex text-left gap-4"
             >
               <div>
                 <svg
@@ -104,7 +113,7 @@ const About: React.FC<Props> = () => {
               </div>
               <div>
                 <p className="font-semibold">Real Food</p>
-                <p className="text-amber-700 max-w-[150px] text-sm">
+                <p className="text-amber-700 md:max-w-[150px] text-sm">
                   Human-grade meat and veggies in simple recipes, made for dogs
                 </p>
               </div>
@@ -114,7 +123,7 @@ const About: React.FC<Props> = () => {
               animate={controls}
               variants={featureVariants}
               transition={{ duration: 1, delay: 1.2, type: "spring" }}
-              className="absolute flex top-10 right-0 text-left gap-4"
+              className="md:absolute flex top-10 right-0 text-left gap-4"
             >
               <div>
                 <svg
@@ -150,7 +159,7 @@ const About: React.FC<Props> = () => {
               </div>
               <div>
                 <p className="font-semibold">Made Fresh</p>
-                <p className="text-amber-700 max-w-[150px] text-sm">
+                <p className="text-amber-700 md:max-w-[150px] text-sm">
                   Maintain whole food and nutritional integrity
                 </p>
               </div>
@@ -160,7 +169,7 @@ const About: React.FC<Props> = () => {
               animate={controls}
               variants={featureVariants}
               transition={{ duration: 1, delay: 1.4, type: "spring" }}
-              className="absolute flex bottom-0 left-0 text-left gap-4"
+              className="md:absolute flex bottom-0 left-0 text-left gap-4"
             >
               <div>
                 <svg
@@ -196,7 +205,7 @@ const About: React.FC<Props> = () => {
               </div>
               <div>
                 <p className="font-semibold">Human Grade</p>
-                <p className="text-amber-700 max-w-[150px] text-sm">
+                <p className="text-amber-700 md:max-w-[150px] text-sm">
                   Safety and quality never before available to pets
                 </p>
               </div>
@@ -206,7 +215,7 @@ const About: React.FC<Props> = () => {
               animate={controls}
               variants={featureVariants}
               transition={{ duration: 1, delay: 1.6, type: "spring" }}
-              className="absolute flex bottom-0 right-0 text-left gap-4"
+              className="md:absolute flex bottom-0 right-0 text-left gap-4"
             >
               <div>
                 <svg
@@ -237,19 +246,10 @@ const About: React.FC<Props> = () => {
               </div>
               <div>
                 <p className="font-semibold">Vet Developed</p>
-                <p className="text-amber-700 max-w-[150px] text-sm">
+                <p className="text-amber-700 md:max-w-[150px] text-sm">
                   Nutrition that exceeds industry standards (AAFCO)
                 </p>
               </div>
-            </motion.div>
-            <motion.div
-              initial={"hidden"}
-              animate={controls}
-              variants={imageVariants}
-              transition={{ duration: 1, delay: 0.6, type: "spring" }}
-              className="flex justify-center mb-40"
-            >
-              <img src="./ingredients.png" />
             </motion.div>
           </div>
         </div>
